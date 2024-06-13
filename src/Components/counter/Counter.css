@@ -1,0 +1,23 @@
+.heading{
+    color: pink;
+}
+.number{
+    border: 2px solid blue;
+   border-radius: 5px;
+    padding: 2px;
+    width: 50px;
+    margin: auto;
+    background-color: aliceblue;
+    color: black;
+}
+
+.btn{
+    margin-top: 10px;
+    margin-right: 5px;
+    border-color: greenyellow;
+}
+.btn1{
+    margin-top: 10px;
+    margin-left: 5px;
+    border-color: red;
+}
