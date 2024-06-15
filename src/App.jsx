@@ -1,5 +1,6 @@
 import './App.css'
 import TaskList from './Components/TaskList/TaskList'
+import Task from './Components/task/Task'
 
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
     <>
 <h1>Hello world</h1>
 <TaskList/>
+<Task/>
     </>
   )
 }
