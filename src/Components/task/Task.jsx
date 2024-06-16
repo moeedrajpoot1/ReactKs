@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 
-const Task = ({data,deleteTask,index}) => {
+const Task = ({data,deleteTask,index,editUser}) => {
     const [isComplete,setIsComplete]=useState(false)
 
     const handleDelete=()=>{
@@ -13,6 +13,13 @@ setIsComplete(!isComplete)
 
 
     }
+    const handleedit=()=>{
+      editUser(data,index)
+      
+
+
+    }
+    
   
 
    
@@ -21,10 +28,12 @@ setIsComplete(!isComplete)
 
 <h1 style={{
     textDecoration:isComplete ? "line-through":"none"
-}}   >{data}</h1>
+}}   >{data}
+  
+</h1>
 <button onClick={handleDelete}   >Delete</button>
 <button  onClick={handleComplete}  >Completed</button>
-<button  >Edit</button>
+<button onClick={handleedit}   >Edit</button>
 
 
 
