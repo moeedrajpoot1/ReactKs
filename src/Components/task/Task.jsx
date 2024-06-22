@@ -27,12 +27,12 @@ setIsComplete(!isComplete)
    
   return (
   <>
-<div className=" flex  justify-around" >
-<h1 style={{
+<div className=" flex    align-middle border justify-around    " >
+<div className="   w-20"   ><h1 className="   text-xl  font-semibold " style={{
     textDecoration:isComplete ? "line-through":"none"
 }}   >{data}
   
-</h1>
+</h1></div>
 
 <button  onClick={handleComplete}  ><MdOutlineIncompleteCircle className='text-xl text-yellow-500   hover:scale-125 duration-150 hover:text-blue-700  ' /></button>
 <button onClick={handleedit}   ><FaEdit className='text-xl text-green-500   hover:scale-125 duration-150 hover:text-blue-700  '/></button>

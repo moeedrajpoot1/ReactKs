@@ -8,7 +8,8 @@ const TaskList = () => {
     const [edittask,setEdit]=useState(null)
     
     const handleClick=()=>{
-        if(edittask !==null){
+  
+        if(edittask !==null){ 
           const update=tasks.map((data,index)=>
             index=== edittask ? inputValue: data
           )
@@ -29,10 +30,12 @@ const TaskList = () => {
 const deleteTask=(deletetask)=>{
   const newtasks=tasks.filter((task,index)=> deletetask !== index);
   setTask(newtasks)
+  window.confirm("Are You sure want to Delete ?")
 };
 const editUser=(data,index)=>{
   setInputValue(data)
   setEdit(index)
+  window.confirm("please update Via Input Filed")
 
 
 
@@ -52,7 +55,7 @@ const editUser=(data,index)=>{
     </div>
     <div className="  mx-auto" >
    <div className="flex w-full items-center  ">
-  <input type="text" name="task" value={inputValue}  onChange={(e)=>setInputValue(e.target.value)}  className="flex h-10  mr-20   min-w-full rounded-md border border-black/30 bg-transparent px-3 py-2 text-sm placeholder:text-gray-600 focus:outline-none focus:ring-1 focus:ring-black/30 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50" type="email" placeholder="Email" />
+  <input type="text" name="task" value={inputValue}  onChange={(e)=>setInputValue(e.target.value)}  className="flex h-10  mr-20   min-w-full rounded-md border border-black/30 bg-transparent px-3 py-2 text-sm placeholder:text-gray-600 focus:outline-none focus:ring-1 focus:ring-black/30 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"  placeholder="Enter Your Task Name:-" />
 <button type="button" onClick={handleClick} className=" mr-20 inline-flex items-center rounded-md bg-black px-3 py-2 text-sm font-semibold text-white hover:bg-black/80">
   Add
   <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="ml-2 h-4 w-4">
@@ -81,33 +84,21 @@ const editUser=(data,index)=>{
 
 
 <section className="mx-auto w-full max-w-7xl px-4 py-4">
-  <div className="flex flex-col space-y-4 md:flex-row md:items-center md:justify-between md:space-y-0">
-    <div>
-      <h2 className="text-lg font-semibold">Employees</h2>
-      <p className="mt-1 text-sm text-gray-700">
-        This is a list of all employees. You can add new employees, edit or
-        delete existing ones.
-      </p>
-    </div>
-    <div>
-      <button type="button" className="rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black">
-        Add new employee
-      </button>
-    </div>
-  </div>
+  
+  
   <div className="mt-6 flex flex-col">
     <div className="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
       <div className="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
-        <div className="overflow-hidden border border-gray-200 md:rounded-lg">
-          <table className="min-w-full divide-y divide-gray-200">
-            <thead className="bg-gray-50">
+        <div className="overflow-hidden border border-gray-900 md:rounded-lg">
+          <table className="min-w-full divide-y divide-gray-700">
+            <thead className="bg-gray-900">
               <tr >
                 
-                <th scope="col" className=" flex justify-around  px-12 py-3.5 text-left text-sm font-normal text-gray-700">
-                  Title
-                  <div>Completed</div>
-                  <div>Edit</div>
-                  <div>Delete</div>
+                <th scope="col" className=" flex justify-around  px-12 py-3.5 text-left text-sm font-normal  text-white">
+                  <h3 className=" text-lg font-semibold">Title</h3>
+                  <h3 className=" text-lg font-semibold">Complete</h3>
+                  <h3 className=" text-lg font-semibold">Edit</h3>
+                  <h3 className=" text-lg font-semibold">Delete</h3>
                 </th>
               
                
